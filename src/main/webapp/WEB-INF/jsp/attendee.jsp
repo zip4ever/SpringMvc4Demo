@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,14 +21,19 @@
 </style>
 </head>
 <body>
+	
+	<a href="?language=en">English</a>
+	<br/>
+	<a href="?language=nl">Dutch</a>
+
 	<h1>Attendee page</h1>
 	<form:form commandName="attendee">
 		<form:errors path="*" cssClass="errorblock" element="div"></form:errors>
-		<label for="textinput1">Enter name:</label>
+		<label for="textinput1"><spring:message code="attendee.name"/>:</label>
 		<form:input path="name" cssErrorClass="error"/>
 		<forms:errors path="name" cssClass="error"/>
 		<br/>
-		<label for="textinput2">Enter email address:</label>
+		<label for="textinput2"><spring:message code="attendee.email.address"/>:</label>
 		<form:input path="emailAddress" cssErrorClass="error"/>
 		<forms:errors path="emailAddress" cssClass="erro"/>
 		<br/>
