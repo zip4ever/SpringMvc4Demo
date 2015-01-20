@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Event page</title>
+<title>Attendee page</title>
 <style type="text/css">
 	.error {
 		color:#ff0000;
@@ -20,14 +20,18 @@
 </style>
 </head>
 <body>
-	<h1>Event page</h1>
-	<form:form commandName="event">
+	<h1>Attendee page</h1>
+	<form:form commandName="attendee">
 		<form:errors path="*" cssClass="errorblock" element="div"></form:errors>
 		<label for="textinput1">Enter name:</label>
 		<form:input path="name" cssErrorClass="error"/>
 		<forms:errors path="name" cssClass="error"/>
-		<br>
-		<input type="submit" class="btn" value="Enter event"/>
+		<br/>
+		<label for="textinput2">Enter email address:</label>
+		<form:input path="emailAddress" cssErrorClass="error"/>
+		<forms:errors path="emailAddress" cssClass="erro"/>
+		<br/>
+		<input type="submit" class="btn" value="Enter Attendee"/>
 	</form:form>
 </body>
 </html>
