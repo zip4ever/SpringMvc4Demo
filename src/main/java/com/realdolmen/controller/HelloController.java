@@ -10,8 +10,8 @@ public class HelloController {
 	@RequestMapping(value = "/greeting")
 	public String sayHello(Model model) {
 		model.addAttribute("greeting", "Hello, world!");
-		// no view resolver yet!
-		return "hello.jsp";
+
+		return "hello";
 	}
 	
 }
